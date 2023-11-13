@@ -4,11 +4,13 @@ require('better-logging')(console);
 const express = require('express');
 const app = express();
 const server = require('http').Server(app);
+const fs = require('fs');
 
 const path = require('path');
 
 app.use('/assets', express.static(path.join(__dirname, 'assets')));
 app.set('view engine', 'ejs');
+
 
 // Agregamos rutas al servidor
 app.get('/', (req, res) => {

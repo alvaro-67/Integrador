@@ -25,6 +25,8 @@
       border-style: dotted;
       border-color: rgb(199, 199, 199);
       margin: 0.1rem;
+      display: flex;
+      flex-direction: column;
     }
 
     button {
@@ -60,33 +62,24 @@
 
 <body>
   <div style="margin: auto;">
-    <!-- Aquí se insertará el contenido específico para cada vista -->
     <div class="container">
-      <button>Agregar</button>
+      <button onclick="Agregar()">Agregar</button>
       <input type="text" name="titulo" id="titulo" placeholder="Titulo">
     </div>
     <div style="display: inline-flex;">
-      <div class="container section">
-        <div class="card">
-          <span>
-            <div style="display: inline-flex;width: 100%;">
-              <i class="fa-solid fa-pen" onclick="EditTitle()" id="icon-edit"></i>
-              <i class="fa-solid fa-floppy-disk" id="icon-save" style="display: none;"></i>
-              <i class="fa-solid fa-xmark" style="margin-left: 94%;"></i>
-            </div>
-            <input class="title-readonly" type="text" id="title" readonly
-              value="Consectetur labore sint fugiat aliqua eiusmod aliqua laboris. Commodo ea quis Lorem aute tempor laboris laboris reprehenderit. Incididunt sunt voluptate amet nisi. Sit non veniam proident proident labore in ut id magna qui mollit.">
-            <div style="margin-left: 90%;">
-              <i class="fa-solid fa-circle-chevron-left"></i>
-              <i class="fa-solid fa-circle-chevron-right"></i>
-            </div>
-          </span>
-        </div>
-      </div> <!-- Tareas por hacer-->
-      <div class="container section"></div> <!-- Tareas en curso-->
-      <div class="container section"></div> <!-- Tareas finalizadas-->
+      <div class="container section" id="tareas-por-hacer">
+        <!-- Tareas por hacer -->
+      </div>
+      <div class="container section" id="tareas-en-curso">
+        <!-- Tareas en curso -->
+      </div>
+      <div class="container section" id="tareas-finalizadas">
+        <!-- Tareas finalizadas -->
+      </div>
     </div>
   </div>
+
 </body>
 <script src="/assets/js/taskManager.js"></script>
+
 </html>
