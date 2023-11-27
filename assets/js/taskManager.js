@@ -8,8 +8,6 @@ function Agregar() {
     if (titulo.trim() !== "") {
       var newCard = document.createElement("div");
       newCard.className = "card";
-      newCard.draggable = true; // Hace que la tarjeta sea arrastrable
-      newCard.setAttribute("ondragstart", "Drag(event)");
       newCard.innerHTML = `
         <span>
           <div style="display: inline-flex;width: 100%;">
